@@ -1,6 +1,6 @@
 """
-Validation: the synthetic data has 5 scripted anomaly events baked in
-(see generate_data.py EVENT_MONTHS) — a fuel cost spike, a hiring freeze,
+Validation: the synthetic data has 6 scripted anomaly events baked in
+(across 5 business unit / line item pairs; see generate_data.py EVENT_MONTHS) — a fuel cost spike, a hiring freeze,
 a campaign overspend, etc. Because we control the ground truth here, we
 can directly check whether a given set of calibrated thresholds actually
 catches these known events, rather than just trusting the statistic.

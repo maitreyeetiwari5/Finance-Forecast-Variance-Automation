@@ -16,8 +16,11 @@ new_threshold = median(|variance_pct|) + K * MAD_scaled
 MAD_scaled = MAD * 1.4826  (the 1.4826 factor makes MAD comparable to a
 standard deviation under a normal distribution, a standard convention)
 
-K = 2.5 chosen as the cutoff: roughly "notably outside typical behavior"
+K = 2.5 is the first-pass cutoff: roughly "notably outside typical behavior"
 without being so tight that ordinary noise months keep tripping it.
+NOTE: this first pass caught only 4 of the 6 known events. validate_thresholds.py
+sweeps K and selects K = 1.2 as the final value used in controls.py.
+threshold_calibration.csv is kept as the record of this rejected first pass.
 
 We floor every calibrated threshold at 4% — below that, we'd be flagging
 essentially every month for even the steadiest line items, which stops

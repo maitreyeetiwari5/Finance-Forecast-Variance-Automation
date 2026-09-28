@@ -1,14 +1,12 @@
 """
 Controls layer: flags variance breaches per (business_unit, line_item, month).
 
-Thresholds are set PER LINE ITEM, not flat across the board — a line
-item's natural volatility should set the bar for what counts as
-"unusual." These are set here using common FP&A materiality conventions
-(tighter for stable, planned lines like Salaries; looser for inherently
-lumpy lines like Marketing spend). In a real deployment these would
-ideally be calibrated from each line item's own historical variance
-distribution (e.g. mean + 1.5x historical std) rather than hardcoded —
-noted as a stated simplification in the write-up.
+Thresholds are set PER LINE ITEM, not flat across the board, because a line
+item's natural volatility should set the bar for what counts as "unusual."
+They are calibrated from each line item's own historical variance (median +
+1.2x scaled MAD) and validated against the six known scripted events; see
+calibrate_thresholds.py, validate_thresholds.py, and METHODOLOGY.md. The
+values below are the output of that validated calibration.
 
 A row is flagged if EITHER:
   - variance_vs_budget_pct breaches the line item's threshold   (a real

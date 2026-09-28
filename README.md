@@ -4,9 +4,9 @@ An end-to-end FP&A automation prototype: rolling forecasts, self-calibrating var
 
 **[Live dashboard](https://maitreyeetiwari5.github.io/FPA-Variance-Automation/)** - filter by business unit and line item to see the forecast, flagged variances, and drafted commentary update together.
 
-**[Excel workbook](fpa_variance_analysis.xlsx)** - the same analysis as a 3-sheet report (Summary, Variance Detail, Action Items) for anyone who wants it in Excel.
+**[Methodology, assumptions & limitations](METHODOLOGY.md)** - how every number is produced, the full threshold calibration trail, a data dictionary for each output file, and where the approach stops being reliable.
 
-A domain-specific extension of this pipeline - forecasting real US mutual fund flows instead of synthetic budget data lives at [Fund Flow Forecasting project](https://github.com/maitreyeetiwari5/fund-flow-forecasting).
+**[Excel workbook](fpa_variance_analysis.xlsx)** - the same analysis as a 3-sheet report (Summary, Variance Detail, Action Items) for anyone who wants it in Excel.
 
 ## Problem
 
@@ -45,7 +45,7 @@ python export_excel.py
 
 - **Forecast method:** a trailing 3-month moving average, chosen over a more complex model specifically for auditability, any FP&A stakeholder can reconstruct the number by hand.
 - **Threshold calibration:** thresholds are learned per line item from historical variance (median + scaled MAD, robust to the outliers it's meant to catch), then validated against 6 known ground-truth anomalies rather than trusted blindly. A naive calibration pass initially missed one known event - validation caught it before it shipped.
-- **Commentary generation:** the tool never invents a cause for a flagged variance. It checks a known-events log and states the driver only when one is on file; otherwise it drafts an objective description and marks it "pending analyst review."
+- **Commentary generation:** rule-based, not AI-generated. The tool never invents a cause for a flagged variance. It checks a known-events log and states the driver only when one is on file; otherwise it drafts an objective description and marks it "pending analyst review."
 
 ## Results
 

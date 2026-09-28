@@ -2,8 +2,8 @@
 
 An end-to-end FP&A automation prototype: rolling forecasts, self-calibrating variance thresholds, and auto-drafted close commentary built to demonstrate what automating the mechanical parts of monthly variance review looks like, without faking the parts that need human judgment.
 
-**[Live dashboard](https://maitreyeetiwari5.github.io/Finance-Forecast-Variance-Automation
-/)** - filter by business unit and line item to see the forecast, flagged variances, and drafted commentary update together.
+**[[Live dashboard](https://maitreyeetiwari5.github.io/Finance-Forecast-Variance-Automation
+/)]** - filter by business unit and line item to see the forecast, flagged variances, and drafted commentary update together.
 
 **[Excel workbook](fpa_variance_analysis.xlsx)** - the same analysis as a 3-sheet report (Summary, Variance Detail, Action Items) for anyone who wants it in Excel.
 

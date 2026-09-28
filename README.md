@@ -4,9 +4,9 @@ An end-to-end FP&A automation prototype: rolling forecasts, self-calibrating var
 
 **[Live dashboard](https://maitreyeetiwari5.github.io/FPA-Variance-Automation/)** - filter by business unit and line item to see the forecast, flagged variances, and drafted commentary update together.
 
-**[Methodology, assumptions & limitations](METHODOLOGY.md)** - how every number is produced, the full threshold calibration trail, a data dictionary for each output file, and where the approach stops being reliable.
-
 **[Excel workbook](fpa_variance_analysis.xlsx)** - the same analysis as a 3-sheet report (Summary, Variance Detail, Action Items) for anyone who wants it in Excel.
+
+**[Methodology, assumptions & limitations](METHODOLOGY.md)** - how every number is produced, the full threshold calibration trail, a data dictionary for each output file, and where the approach stops being reliable.
 
 ## Problem
 

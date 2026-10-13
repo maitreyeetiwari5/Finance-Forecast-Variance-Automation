@@ -10,10 +10,10 @@ An end-to-end FP&A automation prototype: rolling forecasts, self-calibrating var
 
 A two-page Power BI report built on this project's outputs: an executive scorecard (actuals vs budget vs forecast, flag rate, forecast accuracy) and an exceptions view (flagged variances, known vs pending drivers, original vs calibrated thresholds). Power Query merges the commentary into the flags table, and DAX measures calculate flag rate and forecast MAPE.
 
-![Executive Scorecard](powerbi/page1-executive-scorecard.png)
-![Exceptions](powerbi/page2-exceptions.png)
+![Executive Scorecard](PowerBi/page1-executive-scorecard.png)
+![Exceptions](PowerBi/page2-exceptions.png)
 
-[Download the PDF](powerbi/FPA_Variance_Dashboard.pdf) | [Download the .pbix](powerbi/FPA_Variance_Dashboard.pbix) (open in the free Power BI Desktop)
+[Download the PDF](PowerBi/FPA_Variance_Dashboard.pdf) | [Download the .pbix](PowerBi/FPA_Variance_Dashboard.pbix) (open in the free Power BI Desktop)
 
 **[Methodology, assumptions & limitations](METHODOLOGY.md)** - how every number is produced, the full threshold calibration trail, a data dictionary for each output file, and where the approach stops being reliable.
 

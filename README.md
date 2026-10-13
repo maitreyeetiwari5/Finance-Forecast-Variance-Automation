@@ -13,7 +13,7 @@ A two-page Power BI report built on this project's outputs: an executive scoreca
 ![Executive Scorecard](Power%20BI/page1-executive-scorecard.png)
 ![Exceptions](Power%20BI/page2-exceptions.png)
 
-[Download the PDF](Power%20BI/FPA_Variance_Dashboard.pdf) | [Download the .pbix](Power%20BI/FPA_Variance_Dashboard.pbix) (open in the free Power BI Desktop)
+[Download the PDF](Power%20BI/FP&A_Variance_Dashboard.pdf) | [Download the .pbix](Power%20BI/FP&A_Variance_Dashboard.pbix) (open in the free Power BI Desktop)
 
 **[Methodology, assumptions & limitations](METHODOLOGY.md)** - how every number is produced, the full threshold calibration trail, a data dictionary for each output file, and where the approach stops being reliable.
 

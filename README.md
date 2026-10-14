@@ -6,6 +6,8 @@ An end-to-end FP&A automation prototype: rolling forecasts, self-calibrating var
 
 **[Excel workbook](fpa_variance_analysis.xlsx)** - the same analysis as a 3-sheet report (Summary, Variance Detail, Action Items) for anyone who wants it in Excel.
 
+**[AI narrative generator](https://github.com/maitreyeetiwari5/AI-Financial-Narrative-Generator)** - an AI layer on this project (work in progress): drafts variance commentary with an LLM, then rejects any draft the data can't support.
+
 ## Power BI dashboard
 
 A two-page Power BI report built on this project's outputs: an executive scorecard (actuals vs budget vs forecast, flag rate, forecast accuracy) and an exceptions view (flagged variances, known vs pending drivers, original vs calibrated thresholds). Power Query merges the commentary into the flags table, and DAX measures calculate flag rate and forecast MAPE. The scorecard figures change with the slicers; with no filter applied they match the 12.8% flag rate and 6.9% MAPE below.

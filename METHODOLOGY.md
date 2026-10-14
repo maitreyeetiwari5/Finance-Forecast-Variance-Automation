@@ -43,8 +43,9 @@ variance_vs_forecast_pct = (actual[t] − forecast[t]) / forecast[t]
 - **Why a 3-month moving average:** anyone reviewing the output can recalculate the
   forecast by hand. A more complex model might be more accurate but could not be checked
   as easily.
-- **Accuracy:** mean absolute percentage error (MAPE) of 7.0% across all months with a
-  forecast.
+- **Accuracy:** mean absolute percentage error (MAPE) of 7.0% across the 450 series-months that
+  have a forecast. Error is measured as |actual − forecast| ÷ forecast, averaged. (Dividing by
+  actual instead, the more common textbook convention, gives 6.9%.)
 
 ## 3. Threshold calibration (`calibrate_thresholds.py`, `validate_thresholds.py`)
 

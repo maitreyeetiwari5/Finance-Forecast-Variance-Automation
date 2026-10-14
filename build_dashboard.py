@@ -42,7 +42,7 @@ def build():
         "total_rows": int(len(full)),
         "flagged_rows": int(len(only_flagged)),
         "flag_rate": round(float(len(only_flagged) / len(full)), 4),
-        "mape": 7.0,
+        "mape": 6.9,
         "events_caught": 6,
         "events_total": 6,
         "known_driver_count": int(merged_flags["has_known_driver"].sum()),

@@ -8,7 +8,7 @@ An end-to-end FP&A automation prototype: rolling forecasts, self-calibrating var
 
 ## Power BI dashboard
 
-A two-page Power BI report built on this project's outputs: an executive scorecard (actuals vs budget vs forecast, flag rate, forecast accuracy) and an exceptions view (flagged variances, known vs pending drivers, original vs calibrated thresholds). Power Query merges the commentary into the flags table, and DAX measures calculate flag rate and forecast MAPE. The scorecard figures change with the slicers; with no filter applied they match the 12.8% flag rate and 7.0% MAPE below.
+A two-page Power BI report built on this project's outputs: an executive scorecard (actuals vs budget vs forecast, flag rate, forecast accuracy) and an exceptions view (flagged variances, known vs pending drivers, original vs calibrated thresholds). Power Query merges the commentary into the flags table, and DAX measures calculate flag rate and forecast MAPE. The scorecard figures change with the slicers; with no filter applied they match the 12.8% flag rate and 6.9% MAPE below.
 
 ![Executive Scorecard](Power%20BI/page1-executive-scorecard.png)
 ![Exceptions](Power%20BI/page2-exceptions.png)
@@ -58,7 +58,7 @@ python export_excel.py
 
 ## Results
 
-- Forecast accuracy: **7.0% MAPE** (|actual − forecast| ÷ forecast; 450 series-months)
+- Forecast accuracy: **6.9% MAPE** (|actual − forecast| ÷ actual; 450 series-months)
 - Flag rate after calibration: **12.8%** (down from 34.8% with hardcoded materiality thresholds)
 - Known anomaly recall: **6/6** caught (naive calibration caught only 4/6)
 - Commentary: 6 of 69 flagged rows matched a known driver and were auto-explained; the rest were honestly routed for analyst review

@@ -59,7 +59,8 @@ if __name__ == "__main__":
     # Quick sanity check: forecast accuracy overall (mean absolute % error,
     # only where forecast exists)
     valid = result.dropna(subset=["forecast"])
-    mape = (valid["variance_vs_forecast_pct"].abs()).mean() * 100
+    # Standard MAPE: |actual - forecast| / actual
+    mape = ((valid["actual"] - valid["forecast"]).abs() / valid["actual"].abs()).mean() * 100
     print(f"Overall forecast MAPE (moving-average model): {mape:.1f}%")
 
     # Show one full series so the mechanics are inspectable

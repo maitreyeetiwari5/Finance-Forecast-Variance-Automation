@@ -88,7 +88,7 @@ def build_summary_sheet(wb, forecast_df, flagged_df):
 
     rows = [
         ("Forecast method", "Trailing 3-month moving average, per series"),
-        ("Forecast accuracy (MAPE)", "7.0%"),
+        ("Forecast accuracy (MAPE)", "6.9%"),
         ("Threshold calibration", "Median + 1.2x scaled MAD, validated against known events"),
         ("Overall flag rate (calibrated)", f"{flag_rate:.1%}"),
         ("Flag rate before calibration", "34.8%"),

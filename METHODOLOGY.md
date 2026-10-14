@@ -43,9 +43,9 @@ variance_vs_forecast_pct = (actual[t] − forecast[t]) / forecast[t]
 - **Why a 3-month moving average:** anyone reviewing the output can recalculate the
   forecast by hand. A more complex model might be more accurate but could not be checked
   as easily.
-- **Accuracy:** mean absolute percentage error (MAPE) of 7.0% across the 450 series-months that
-  have a forecast. Error is measured as |actual − forecast| ÷ forecast, averaged. (Dividing by
-  actual instead, the more common textbook convention, gives 6.9%.)
+- **Accuracy:** mean absolute percentage error (MAPE) of 6.9% across the 450 series-months that
+  have a forecast, measured as |actual − forecast| ÷ actual, averaged. (Flagging uses a
+  different ratio, variance ÷ forecast, which is why the threshold columns are in that scale.)
 
 ## 3. Threshold calibration (`calibrate_thresholds.py`, `validate_thresholds.py`)
 
@@ -181,7 +181,7 @@ kept as a record of the rejected thresholds.
 ```bash
 pip install -r requirements.txt
 python generate_data.py
-python forecast.py            # prints MAPE (7.0%)
+python forecast.py            # prints MAPE (6.9%)
 python calibrate_thresholds.py
 python validate_thresholds.py # prints the K sweep and the chosen K
 python controls.py            # prints 69 of 540 rows flagged (12.8%)
